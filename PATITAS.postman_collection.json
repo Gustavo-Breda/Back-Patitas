@@ -1,0 +1,1609 @@
+{
+	"info": {
+		"_postman_id": "e6d4ab9c-31db-490b-9061-e1f2bd94ade0",
+		"name": "PATITAS",
+		"description": "Esta API contêm as requisições básicas usadas no protótipo do APP \"PATITAS\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32671215"
+	},
+	"item": [
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Create_Produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bolinha para Animais\",\r\n    \"preco\": 85.90,\r\n    \"descricao\": \" \",\r\n    \"categoria\": [\"Brinquedo\", \"Cães\", \"Gatos\"],\r\n    \"quantidade\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/produtos"
+					},
+					"response": [
+						{
+							"name": "Create_Produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Bolinha para Animais\",\r\n    \"preco\": 85.90,\r\n    \"descricao\": \" \",\r\n    \"categoria\": [\"Brinquedo\", \"Cães\", \"Gatos\"],\r\n    \"quantidade\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/produtos"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-d4Vxz6ClP7Z97u0JmCIwh8t16kU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:32:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"nome\": \"Bolinha para Animais\",\n    \"preco\": \"85.90000000000001\",\n    \"descricao\": \" \",\n    \"categoria\": [\n        \"Brinquedo\",\n        \"Cães\",\n        \"Gatos\"\n    ],\n    \"quantidade\": 100\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_All_Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/produtos"
+					},
+					"response": [
+						{
+							"name": "Get_All_Produtos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/produtos"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-MJX8vWcJNzetQQTSdEUbmzU/pSE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:32:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 9,\n        \"nome\": \"Bolinha para Animais\",\n        \"preco\": \"85.90000000000001\",\n        \"descricao\": \" \",\n        \"categoria\": [\n            \"Brinquedo\",\n            \"Cães\",\n            \"Gatos\"\n        ],\n        \"quantidade\": 100\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get_Produto_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/produtos/9"
+					},
+					"response": [
+						{
+							"name": "Get_Produto_ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/produtos/9"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-d4Vxz6ClP7Z97u0JmCIwh8t16kU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:33:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"nome\": \"Bolinha para Animais\",\n    \"preco\": \"85.90000000000001\",\n    \"descricao\": \" \",\n    \"categoria\": [\n        \"Brinquedo\",\n        \"Cães\",\n        \"Gatos\"\n    ],\n    \"quantidade\": 100\n}"
+						}
+					]
+				},
+				{
+					"name": "Update_Produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bolinha para Gatos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/produtos/9"
+					},
+					"response": [
+						{
+							"name": "Update_Produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Bolinha para Gatos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/produtos/9"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-aqqIhGFvS405PRee7awfAyAQtIE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:33:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"nome\": \"Bolinha para Gatos\",\n    \"preco\": \"85.90000000000001\",\n    \"descricao\": \" \",\n    \"categoria\": [\n        \"Brinquedo\",\n        \"Cães\",\n        \"Gatos\"\n    ],\n    \"quantidade\": 100\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete_Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3333/produtos/8"
+					},
+					"response": [
+						{
+							"name": "Delete_Produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3333/produtos/8"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-X6xeW+dAoUWmnX3yvxYZgeVjrP8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:32:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Produto deletado com sucesso\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Pasta das resquisições possíveis para modelo \"Products\""
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Cadastro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gustavo\",\r\n    \"cpf\": \"00001000000\",\r\n    \"email\": \"gustavo@gmail.com\",\r\n    \"senha\": \"coxinha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/usuario"
+					},
+					"response": [
+						{
+							"name": "Cadastro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Gustavo\",\r\n    \"cpf\": \"00001000000\",\r\n    \"email\": \"gustavo@gmail.com\",\r\n    \"senha\": \"coxinha123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/usuario"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b-Xc7TNOH9B3XFS6okuqkDC5yM4Jg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:39:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"cpf\": \"00001000000\",\n    \"nome\": \"Gustavo\",\n    \"email\": \"gustavo@gmail.com\",\n    \"endereco\": null,\n    \"cartao\": null,\n    \"hash\": \"bf411c5409af1ee1ae340baa063fd8257e9dc598f9a7d2f8ffd230abfc69637aff3a71e93c9abbdfcc32cf730eee08ce3435bb794720261b009b9b9e72462cb4\",\n    \"salt\": \"8394d65d55e18d5fdb28d003407c01c8261d9898f020ef4fd0ba61b37b8fbe5a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_All_Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/usuario"
+					},
+					"response": [
+						{
+							"name": "Get_All_Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/usuario"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "329"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"149-QdaT6sMAg2OLVrSoo/iHIZ0Vq2Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 13:41:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"cpf\": \"00001000000\",\n        \"nome\": \"Gustavo\",\n        \"email\": \"gustavo@gmail.com\",\n        \"foto\": null,\n        \"endereco\": null,\n        \"cartao\": null,\n        \"hash\": \"bf411c5409af1ee1ae340baa063fd8257e9dc598f9a7d2f8ffd230abfc69637aff3a71e93c9abbdfcc32cf730eee08ce3435bb794720261b009b9b9e72462cb4\",\n        \"salt\": \"8394d65d55e18d5fdb28d003407c01c8261d9898f020ef4fd0ba61b37b8fbe5a\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get_User_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/usuario/2"
+					},
+					"response": [
+						{
+							"name": "Get_User_ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/usuario/2"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "327"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"147-5SkAeKDjOuiaZ0l69PEpkgkgWIA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 13:41:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"cpf\": \"00001000000\",\n    \"nome\": \"Gustavo\",\n    \"email\": \"gustavo@gmail.com\",\n    \"foto\": null,\n    \"endereco\": null,\n    \"cartao\": null,\n    \"hash\": \"bf411c5409af1ee1ae340baa063fd8257e9dc598f9a7d2f8ffd230abfc69637aff3a71e93c9abbdfcc32cf730eee08ce3435bb794720261b009b9b9e72462cb4\",\n    \"salt\": \"8394d65d55e18d5fdb28d003407c01c8261d9898f020ef4fd0ba61b37b8fbe5a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update_Foto_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Foto_Perfil",
+									"type": "file",
+									"src": "/C:/Users/Clóvis/Pictures/Screenshots/Captura de Tela (5433).png"
+								}
+							]
+						},
+						"url": "localhost:3333/user/setFoto/2"
+					},
+					"response": [
+						{
+							"name": "Update_Foto_User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fotoPerfil",
+											"type": "file",
+											"src": "/C:/Users/Clóvis/Pictures/Screenshots/Captura de Tela (5433).png"
+										}
+									]
+								},
+								"url": "localhost:3333/user/setFoto/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "361"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"169-4WIwYX7NCstRu2yzeP8H4bHTebY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 21:12:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"cpf\": \"00001000000\",\n    \"nome\": \"Gustavo\",\n    \"email\": \"gustavo@gmail.com\",\n    \"foto\": \"userId-2-1706908368778-387080090.png\",\n    \"endereco\": null,\n    \"cartao\": null,\n    \"hash\": \"bf411c5409af1ee1ae340baa063fd8257e9dc598f9a7d2f8ffd230abfc69637aff3a71e93c9abbdfcc32cf730eee08ce3435bb794720261b009b9b9e72462cb4\",\n    \"salt\": \"8394d65d55e18d5fdb28d003407c01c8261d9898f020ef4fd0ba61b37b8fbe5a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:3333/usuario/2"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cpf\": \"00000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/usuario/2"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "361"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"169-6S9NYslRF1+Df+i9DR/xnRR0YNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 21:13:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"cpf\": \"00000000000\",\n    \"nome\": \"Gustavo\",\n    \"email\": \"gustavo@gmail.com\",\n    \"foto\": \"userId-2-1706908368778-387080090.png\",\n    \"endereco\": null,\n    \"cartao\": null,\n    \"hash\": \"bf411c5409af1ee1ae340baa063fd8257e9dc598f9a7d2f8ffd230abfc69637aff3a71e93c9abbdfcc32cf730eee08ce3435bb794720261b009b9b9e72462cb4\",\n    \"salt\": \"8394d65d55e18d5fdb28d003407c01c8261d9898f020ef4fd0ba61b37b8fbe5a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete_User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3333/usuario/1"
+					},
+					"response": [
+						{
+							"name": "Delete_User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3333/usuario/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-ftO1aYncsSB/LT0zOoLFV6pMsL0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:39:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Usuario deleado com sucesso\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Pasta das resquisições possíveis para modelo \"User\""
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Create_Pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioID\": 2,\r\n    \"nome\": \"Cecília\",\r\n    \"sexo\": \"Macho\",\r\n    \"especie\": \"Cachorro\",\r\n    \"vacina\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/pet"
+					},
+					"response": [
+						{
+							"name": "Create_Pet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioID\": 2,\r\n    \"nome\": \"Cecília\",\r\n    \"sexo\": \"Macho\",\r\n    \"especie\": \"Cachorro\",\r\n    \"vacina\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/pet"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"58-WTmnsJi2SCy8SG9Bvy8ekNF1Z8I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:40:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nome\": \"Cecília\",\n    \"sexo\": \"Macho\",\n    \"especie\": \"Cachorro\",\n    \"vacina\": [],\n    \"usuarioID\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Update_pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sexo\": \"Fêmea\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/pet/3"
+					},
+					"response": [
+						{
+							"name": "Update_pet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sexo\": \"Fêmea\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/pet/2"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-fj8PrnRiQIveIyhwDNMXOFcgcZc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:41:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nome\": \"Cecília\",\n    \"sexo\": \"Fêmea\",\n    \"especie\": \"Cachorro\",\n    \"vacina\": [],\n    \"usuarioID\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/pet"
+					},
+					"response": [
+						{
+							"name": "Get_Pets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/pet"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-Z8L0NwPK8SvmWA0g+7gR1LJ58bU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:41:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"nome\": \"Cecília\",\n        \"sexo\": \"Fêmea\",\n        \"especie\": \"Cachorro\",\n        \"vacina\": [],\n        \"usuarioID\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete_Pet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3333/pet/2"
+					},
+					"response": [
+						{
+							"name": "Delete_Pet",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3333/pet/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-kdS3pQcNR0byiN4opzpMlsiGLww\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:41:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Pet deletado com sucesso\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Pasta das resquisições possíveis para modelo \"Pet\""
+		},
+		{
+			"name": "Acesso",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "",
+								"username": ""
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "gustavo@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "coxinha123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "localhost:3333/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "gustavo@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "senha",
+											"value": "coxinha123",
+											"type": "text"
+										}
+									]
+								},
+								"url": "localhost:3333/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "799"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31f-d0p4+zwAqaxpkYS+xieecYd70bA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:41:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTcwNjg3NzcxODIxNSwiZXhwIjoxNzA2ODc4MzIzMDE1fQ.OF-YW9p12MJ0WLf6yzqb3D-Xt41L9rUOgdTEw5GzQo7Hnn330l3dM6u0rKc7zHx11t2fYdG3dUmdmuuaBzgerBcWH9iZXKb3kErnlVt6NpjaOgutwCXn9zdhJrtFJUfq8CzzJuAFZlcHMSOENCNxFJoEXUtegBpXyQC8Z4e2jbn3fN0gmWYUKlcPRyIWGX4SQwbalf41cmC8JZ0xf3BJn1Q6_RkMYEgsURcvN-WAthv1tTPEmjRtjQ16IHVvDRWoox2AgwZHjn6R3BtpUprSjbASOg3rqgtR_mVASdR2pEHQVOOywQ60hZ58vi_A82UeCerLs5mAzh9zgv-HuEGDveHaAe1hHxtJiJTXT8XxYPsDPoM5qIGfityXWkua2q0mPw8DZvwXFV-oPW9PjTzG8in88BGoRf_psVDGIC62Wp35HVkQdnJNtzp0FzuHptAFnjixsghz7XuT9vSngsFywkLd00F5iAsk0k3T8oA3eTfnhs4CvyTMEjUJkC7p7FBtMY3z5Om8VrPDWI9AmMB-IHAch-byN1BoXi3VPm70ugYCr2gtORmECqu2qrrq2lehn0HWfUYm6cUWWvgK1humjEmRi8TF962z4DF3_HtvtFML3m6_cZwx0Y5qAptxLrdav4uEw2PTj36-Ddv1Bpc3Oh7ITE6fpn36nXyNGprkJeY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Informations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTcwNjg3NzcxODIxNSwiZXhwIjoxNzA2ODc4MzIzMDE1fQ.OF-YW9p12MJ0WLf6yzqb3D-Xt41L9rUOgdTEw5GzQo7Hnn330l3dM6u0rKc7zHx11t2fYdG3dUmdmuuaBzgerBcWH9iZXKb3kErnlVt6NpjaOgutwCXn9zdhJrtFJUfq8CzzJuAFZlcHMSOENCNxFJoEXUtegBpXyQC8Z4e2jbn3fN0gmWYUKlcPRyIWGX4SQwbalf41cmC8JZ0xf3BJn1Q6_RkMYEgsURcvN-WAthv1tTPEmjRtjQ16IHVvDRWoox2AgwZHjn6R3BtpUprSjbASOg3rqgtR_mVASdR2pEHQVOOywQ60hZ58vi_A82UeCerLs5mAzh9zgv-HuEGDveHaAe1hHxtJiJTXT8XxYPsDPoM5qIGfityXWkua2q0mPw8DZvwXFV-oPW9PjTzG8in88BGoRf_psVDGIC62Wp35HVkQdnJNtzp0FzuHptAFnjixsghz7XuT9vSngsFywkLd00F5iAsk0k3T8oA3eTfnhs4CvyTMEjUJkC7p7FBtMY3z5Om8VrPDWI9AmMB-IHAch-byN1BoXi3VPm70ugYCr2gtORmECqu2qrrq2lehn0HWfUYm6cUWWvgK1humjEmRi8TF962z4DF3_HtvtFML3m6_cZwx0Y5qAptxLrdav4uEw2PTj36-Ddv1Bpc3Oh7ITE6fpn36nXyNGprkJeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "localhost:3333/userInfo"
+					},
+					"response": [
+						{
+							"name": "Informations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "localhost:3333/userInfo"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"146-jh33NRL6i97kAYC9C+XkTUGN/pc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:42:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"client\": {\n        \"id\": 2,\n        \"cpf\": \"00001000000\",\n        \"nome\": \"Gustavo\",\n        \"email\": \"gustavo@gmail.com\",\n        \"endereco\": null,\n        \"cartao\": null,\n        \"hash\": \"bf411c5409af1ee1ae340baa063fd8257e9dc598f9a7d2f8ffd230abfc69637aff3a71e93c9abbdfcc32cf730eee08ce3435bb794720261b009b9b9e72462cb4\",\n        \"salt\": \"8394d65d55e18d5fdb28d003407c01c8261d9898f020ef4fd0ba61b37b8fbe5a\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Pasta das resquisições relacionadas ao login"
+		},
+		{
+			"name": "Carrinho",
+			"item": [
+				{
+					"name": "Criando_Carrinho",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2, \"totalValue\": 0, \"productsAmount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/carrinho"
+					},
+					"response": [
+						{
+							"name": "Criando_Carrinho",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2, \"totalValue\": 0, \"productsAmount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-AECpriZJx7wvPV5oNnpRml2vjlo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:42:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": 2,\n    \"totalValue\": \"0\",\n    \"productsAmount\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_All_Carrinhos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/carrinho"
+					},
+					"response": [
+						{
+							"name": "Get_All_Carrinhos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-TnajWI3MR4GxohMp3xgZldn48Ys\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:43:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"userId\": 2,\n        \"totalValue\": \"0\",\n        \"productsAmount\": 0\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "Pasta das resquisições possíveis para modelo \"Cart\""
+		},
+		{
+			"name": "Produtos_no_Carrinho",
+			"item": [
+				{
+					"name": "Add_Produto_Carrinho",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2, \"productId\": 9, \"amount\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/add_produto_carrinho"
+					},
+					"response": [
+						{
+							"name": "Add_Produto_Carrinho",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2, \"productId\": 9, \"amount\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/add_produto_carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-hxqTnaBNRWDsdECFoi+10I+b4hA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:43:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": 2,\n    \"productId\": 9,\n    \"amount\": 6\n}"
+						}
+					]
+				},
+				{
+					"name": "Carrinho_apos_add",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/carrinho"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-/EJbcpxYY8TqOY0Itronelh4Li4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:44:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"userId\": 2,\n        \"totalValue\": \"515.4\",\n        \"productsAmount\": 6\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Remove_Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2, \"productId\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3333/remove_produto_carrinho"
+					},
+					"response": [
+						{
+							"name": "Remove_Item",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2, \"productId\": 9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3333/remove_produto_carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-sBuOjgG5jseXbHrmVC8CBzwdJFg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:44:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Item removido do carrinho\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Carrinho_apos_remove",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/carrinho"
+					},
+					"response": [
+						{
+							"name": "Carrinho_apos_remove",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-bFd6BgR6rAStQzUYWrDdPPbYdQw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:45:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"userId\": 2,\n        \"totalValue\": \"429.5\",\n        \"productsAmount\": 5\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Remove_All_Products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3333/remove_produto_carrinho/2"
+					},
+					"response": [
+						{
+							"name": "Remove_All_Products",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3333/remove_produto_carrinho/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-TyU0FYSEZwAPBBk3v27gT4MSj7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:45:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Carrinho esvaziado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Carrinho_apos_delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3333/carrinho"
+					},
+					"response": [
+						{
+							"name": "Carrinho_apos_delete",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3333/carrinho"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-TnajWI3MR4GxohMp3xgZldn48Ys\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 12:46:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"userId\": 2,\n        \"totalValue\": \"0\",\n        \"productsAmount\": 0\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "Pasta das resquisições possíveis para modelo \"ProductsOnCart\""
+		},
+		{
+			"name": "Compra",
+			"item": [],
+			"description": "Pasta das resquisições possíveis para modelo \"Compra\""
+		},
+		{
+			"name": "Produtos_na_Compra",
+			"item": [],
+			"description": "Pasta das resquisições possíveis para modelo \"ProductsOnPurchase\""
+		}
+	]
+}

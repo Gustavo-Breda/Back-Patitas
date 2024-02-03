@@ -1,0 +1,105 @@
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:Shinelo2455@localhost:5433/postgres?schema=public"
+  
+}
+
+model User {
+  id               Int                @id         @default(autoincrement())
+  cpf              String             @unique     @db.Char(11)
+  nome             String    
+  email            String             @unique
+  foto             String?            
+  endereco         String?
+  cartao           String?      
+
+  hash             String
+  salt             String
+
+  pets             Pet[]
+  carrinho         Cart?
+  compra           Purchase[]
+
+  @@map("usuario")
+}
+
+model Cart {
+  user             User               @relation(fields: [userId], references: [id])
+  userId           Int                @id @map("id_usuario")
+  totalValue       Decimal            @map("valor_total") @db.Money
+  productsAmount   Int                @map("qtd_produtos")
+
+  products         ProductsOnCart[]
+
+  @@map("carrinho")
+}
+
+model Product {
+  id            Int                 @id         @default(autoincrement())
+  nome          String    
+  preco         Decimal    
+  descricao     String?   
+  categoria     String[]
+  quantidade    Int     
+
+  carrinho      ProductsOnCart[]
+  compra        ProductsOnPurchase[]
+
+  @@map("produtos")
+}
+
+
+model Pet {
+  id             Int                     @id          @default(autoincrement())
+  nome           String
+  sexo           String
+  especie        String
+  vacina         String[]
+  usuario        User                    @relation(fields: [usuarioID], references: [id])
+  usuarioID      Int
+
+  @@map("pets")
+}
+
+model Purchase {
+  date                  DateTime               @default(now())
+  user                  User                   @relation(fields: [userId], references: [id])
+  userId                Int                    @map("id_usuario")
+
+  totalValue            Decimal                @map("total_value") @db.Money
+  products              ProductsOnPurchase[] 
+
+  @@id([date, userId])
+  @@map("compra")
+}
+
+model ProductsOnPurchase {
+  product                Product               @relation(fields: [productId], references: [id])
+  productId              Int                   @map("id_produto")
+
+  purchase               Purchase              @relation(fields: [purchaseDate, purchaseId], references: [date, userId])
+  purchaseDate           DateTime              @map("data_compra")
+  purchaseId             Int                   @map("id_compra")
+
+  amount                 Int
+
+  @@id([productId, purchaseDate, purchaseId])
+  @@map("produtos_na_compra")
+}
+
+model ProductsOnCart {
+  user                  Cart                   @relation(fields: [userId], references: [userId])
+  userId                Int                    @map("id_usuario")
+  product               Product                @relation(fields: [productId], references: [id])
+  productId             Int                    @map("id_produto")
+  amount                Int
+
+  @@id([userId, productId])
+  @@map("produtos_no_carrinho")
+}
